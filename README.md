@@ -31,7 +31,7 @@ http://127.0.0.1:8000/notify/
 - Go to this URL to send a message from admin to a specific user.
 
 ### 2. User Notification Page
-http://127.0.0.1:8000/<username>/
+http://127.0.0.1:8000/username/
 
 - Replace `<username>` with the actual username.
 - Example: http://127.0.0.1:8000/suresh/
