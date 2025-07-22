@@ -1,0 +1,16 @@
+<h2>Welcome, {{ username }}</h2>
+<h4>Your Notifications</h4>
+<ul id="notif-list"></ul>
+
+<script>
+    const username = "{{ username }}";
+    const socket = new WebSocket(`ws://${window.location.host}/ws/notify/${username}/`);
+
+    socket.onmessage = function(e) {
+        const data = JSON.parse(e.data);
+        const notifList = document.getElementById("notif-list");
+        const li = document.createElement("li");
+        li.innerText = data.message;
+        notifList.appendChild(li);
+    };
+</script>
