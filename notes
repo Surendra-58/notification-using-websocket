@@ -4,6 +4,10 @@ daphne -p 8000 websocket.asgi:application
 # To create requirements.txt
 pip freeze > requirements.txt
 
+# To create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 # To instal requirements.txt
 pip install -r requirements.txt
 
